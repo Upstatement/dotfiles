@@ -49,7 +49,7 @@
 		".vagrant",
 		"docs/html"
 	],
-	"font_size": 12,
+	"font_size": 15,
 	"ignored_packages":
 	[
 		"Vintage"
