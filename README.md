@@ -2,7 +2,7 @@
 
 (inspired by dcramer's dotfiles, which were inspired by Armin Ronacher)
 
-# Instructions for use:
+## Instructions for use:
 
 1. Download & install Armin's vcprompt [link](https://www.dropbox.com/s/t9bwiwi2c0fexgp/vcprompt.zip)
  * Download that file to a folder called ~/Sources
