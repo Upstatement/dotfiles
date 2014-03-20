@@ -6,16 +6,11 @@
 ## ===== Pete / Upstatement modifications ===== ##
 
 # if npm exists, set global prefix to home dir
-if [ -e "/usr/local/bin/npm"]; then
+if [ -e "/usr/local/bin/npm" ]; then
   npm config set prefix ~/npm
 fi
 
-# if RVM is installed, run the rvm init
-if [ -e "$HOME/.rvm/scripts/rvm"]; then
-  source ~/.rvm/scripts/rvm
-fi
-
-if [ -nd "$HOME/bin"]; then
+if [ ! -d "$HOME/bin" ]; then
   mkdir ~/bin
 fi
 
@@ -235,12 +230,11 @@ if [ `uname` == "Darwin" ]; then
   fi;
 fi;
 
-
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm  # This loads RVM into a shell session.
 
-export CHEF_USER=zeeg
+# export CHEF_USER=zeeg
 
 # AWS tooling
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.12.002/libexec"
+# export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
+# export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.12.002/libexec"
