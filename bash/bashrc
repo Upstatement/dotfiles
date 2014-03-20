@@ -14,6 +14,8 @@ if [ ! -d "$HOME/bin" ]; then
   mkdir ~/bin
 fi
 
+alias server='python -m SimpleHTTPServer'
+
 ## /end pete-mod
 
 # If not running interactively, don't do anything
