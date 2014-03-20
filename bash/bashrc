@@ -3,6 +3,24 @@
 # Inspired greatly by Armin Ronacher's bashrc
 # https://github.com/mitsuhiko/dotfiles/blob/master/bash/bashrc
 
+## ===== Pete / Upstatement modifications ===== ##
+
+# if npm exists, set global prefix to home dir
+if [ -e "/usr/local/bin/npm"]; then
+  npm config set prefix ~/npm
+fi
+
+# if RVM is installed, run the rvm init
+if [ -e "$HOME/.rvm/scripts/rvm"]; then
+  source ~/.rvm/scripts/rvm
+fi
+
+if [ -nd "$HOME/bin"]; then
+  mkdir ~/bin
+fi
+
+## /end pete-mod
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -108,15 +126,14 @@ fi
 export IGNOREEOF=1
 export LESS=FRSX
 
-export EDITOR=nano
+export EDITOR=subl
 export PYOPEN_CMD=subl
 export SVN_EDITOR=$EDITOR
 export GIT_EDITOR=$SVN_EDITOR
 
 export LIBTOOLIZE=glibtoolize
 
-export PATH=./node_modules/.bin:$HOME/.rvm/bin:/usr/local/share/npm/bin/:~/node_modules/.bin:~/pear/bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export GOPATH=~/Development/go
+export PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/npm/bin/:~/node_modules/.bin:~/pear/bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # python
 export PYTHONDONTWRITEBYTECODE=1
