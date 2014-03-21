@@ -2,9 +2,16 @@
 	"installed_packages":
 	[
 		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"JsFormat",
+		"JSHint Gutter",
 		"Package Control",
 		"SublimeLinter",
 		"SublimeLinter-pep8",
 		"SublimeLinter-pyflakes"
+	],
+	"repositories":
+	[
+		"https://github.com/jdc0589/JsFormat"
 	]
 }
