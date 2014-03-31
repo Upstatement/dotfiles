@@ -1,14 +1,24 @@
 {
 	"installed_packages":
 	[
+		"Alignment",
+		"Dayle Rees Color Schemes",
+		"DocBlockr",
+		"Emmet",
 		"GitGutter",
+		"GitHub Flavored Markdown Preview",
 		"HTML-CSS-JS Prettify",
 		"JsFormat",
 		"JSHint Gutter",
 		"Package Control",
+		"Predawn",
+		"Sass",
+		"SideBarEnhancements",
 		"SublimeLinter",
-		"SublimeLinter-pep8",
-		"SublimeLinter-pyflakes"
+		"Theme - Flatland",
+		"Theme - Soda",
+		"Theme - Spacegray",
+		"Twig"
 	],
 	"repositories":
 	[
