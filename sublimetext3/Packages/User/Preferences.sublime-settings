@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/User/Flatland Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -55,6 +55,6 @@
 		"E501"
 	],
 	"soda_classic_tabs": false,
-	"theme": "Flatland Dark.sublime-theme",
+	"tabs_small": true,
 	"trim_trailing_white_space_on_save": true
 }
