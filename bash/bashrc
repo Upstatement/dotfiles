@@ -34,7 +34,7 @@ else
   USER_COLOR=$ORANGE_COLOR
 fi
 
-VCPROMPT_EXECUTABLE=/usr/local/bin/vcprompt
+VCPROMPT_EXECUTABLE=$HOME/bin/vcprompt
 SSHUTTLE_EXECUTABLE=/usr/local/bin/sshuttle
 
 function vcprompt() {
