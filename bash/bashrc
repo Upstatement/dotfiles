@@ -4,6 +4,7 @@
 # https://github.com/mitsuhiko/dotfiles/blob/master/bash/bashrc
 
 ## ===== Pete / Upstatement modifications ===== ##
+export MONGOHQ_URL='mongodb://dev:gordon@oceanic.mongohq.com:10066/dev-assets'
 
 # if npm exists, set global prefix to home dir
 if [ -e "/usr/local/bin/npm" ]; then
@@ -130,7 +131,7 @@ export GIT_EDITOR=$SVN_EDITOR
 
 export LIBTOOLIZE=glibtoolize
 
-export PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/npm/bin:~/node_modules/.bin:~/pear/bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/npm/bin:~/node_modules/.bin:~/pear/bin:~/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix php55)/bin:$PATH
 
 # python
 export PYTHONDONTWRITEBYTECODE=1
@@ -142,6 +143,7 @@ if [ `id -u` != '0' ]; then
   export VIRTUALENV_USE_DISTRIBUTE=1
   export WORKON_HOME=$HOME/.virtualenvs
   export PIP_VIRTUALENV_BASE=$WORKON_HOME
+  export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache 
   export PIP_REQUIRE_VIRTUALENV=true
   export PIP_RESPECT_VIRTUALENV=true
   #export PIP_USE_MIRRORS=true
@@ -149,6 +151,10 @@ if [ `id -u` != '0' ]; then
     source /usr/local/bin/virtualenvwrapper.sh
   fi
 fi
+
+syspip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 
 # Enable bash history
 export HISTCONTROL=erasedups

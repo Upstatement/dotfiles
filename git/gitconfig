@@ -6,6 +6,9 @@
   email = pete@upstatement.com
 
 [color]
+  diff = auto
+  status = auto
+  branch = auto
   ui = auto
 
 [color "diff"]
@@ -32,9 +35,26 @@
   co = checkout
   df = diff
   lg = log -p
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
+
+  co = checkout
+  cp = cherry-pick
+  lg = log -p
+
+  # Show the log, with the diff +'s and -'s
+  lc = log ORIG_HEAD.. --stat --no-merges datetag = "tag `date '+%Y%m%d%H%M'`"
+
+  # The first thing I run on a new project. Who has done the most damage
+  who = shortlog -s --
+
+  # random stuff cargoculted from who knows where
+  graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  up = !sh -c 'git pull && git log --pretty=format:"%Cred%ae %Creset - %Cyellow%s %Creset%ar" HEAD@{1}..'
+  msgforsvn = log --pretty=format:\"%h\t%b\"
+  svnfind = !sh -c 'git msgforsvn | grep -e \\@$0 | cut -f 1'
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t=> \\2/' | sort
 
 [hub]
   protocol = https
@@ -44,7 +64,23 @@
 
 [push]
   default = matching
+
 [branch]
-	autosetuprebase = always
+	autosetuprebase = never
+
 [help]
 	autocorrect = 1
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "chdiff"]
+   cmd = /usr/bin/env chdiff --wait "$LOCAL" "$REMOTE"
+   keepBackup = false
+   trustExitCode = false
+
+[push]
+  default = tracking
+
+[difftool]
+  prompt = false

@@ -1,5 +1,4 @@
 {
-	"color_scheme": "Packages/User/Sunburst (SL).tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -26,8 +25,6 @@
 		".coverage",
 		"nosetests.xml",
 		"*.bak",
-		"*.min.js",
-		"*.min.css",
 		".phutil_module_cache"
 	],
 	"folder_exclude_patterns":
@@ -45,16 +42,20 @@
 		".vagrant",
 		"docs/html"
 	],
-	"font_size": 15,
+	"font_face": "Inconsolata",
+	"font_size": 18,
 	"ignored_packages":
 	[
 		"Vintage"
+	],
+	"index_exclude_patterns":
+	[
+		"/Users/pkarl/Sites/iapp-vagrant*",
+		"*.log"
 	],
 	"pep8_ignore":
 	[
 		"E501"
 	],
-	"soda_classic_tabs": false,
-	"tabs_small": true,
 	"trim_trailing_white_space_on_save": true
 }
