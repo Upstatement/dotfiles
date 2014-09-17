@@ -1,6 +1,9 @@
 [ui]
 username = Pete Karl II <pete.karl@gmail.com>
 
+[alias]
+brebase = rebase --keepbranches --dest $1
+
 [extensions]
 shelve =
 purge =

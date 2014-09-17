@@ -1,4 +1,5 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
 		"3024 Color Scheme",
@@ -26,6 +27,9 @@
 		"Markdown Preview",
 		"Monokai Extended",
 		"nginx",
+		"DashDoc",
+		"GitGutter",
+		"LESS",
 		"Package Control",
 		"PhpDoc",
 		"PHPUnit Completions",

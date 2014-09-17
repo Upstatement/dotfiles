@@ -1,5 +1,6 @@
 install: install-bash install-virtualenvwrapper install-pythonrc \
-		 install-subl install-bin install-vcprompt install-git install-hg
+		 install-subl install-bin install-vcprompt install-git install-hg \
+		 install-fish
 
 install-vcprompt:
 	@rm -rf /tmp/vcprompt
@@ -17,8 +18,8 @@ install-hg:
 	ln -fs `pwd`/hg/hgrc ~/.hgrc
 
 install-bin:
-	mkdir -p ~/bin/
-	ln -fs `pwd`/bin/* ~/bin/
+	mkdir -p ~/.bin/
+	ln -fs `pwd`/bin/* ~/.bin/
 
 install-bash:
 	ln -fs `pwd`/bash/bashrc ~/.bash_profile
@@ -37,3 +38,14 @@ ifeq ($(shell uname),Darwin)
 	ln -fs `pwd`/sublimetext3/Packages/User/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 	ln -fs "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 endif
+
+install-fish:
+	mkdir -p ~/.config/fish/
+	ln -fs `pwd`/fish/config.fish ~/.config/fish/config.fish
+
+install-zsh:
+	ln -fs `pwd`/zsh/zshrc ~/.zshrc
+	# TODO(dcramer): there must be a better way to do specify my own theme?
+	[ -e ~/.oh-my-zsh ] && ln -fs `pwd`/zsh/themes/* ~/.oh-my-zsh/themes/
+	# mkdir -p ~/.zsh-extras/
+	# [ ! -e ~/.zsh-extras/zsh-autosuggestions ] && git clone git://github.com/tarruda/zsh-autosuggestions ~/.zsh-extras/zsh-autosuggestions

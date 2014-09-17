@@ -63,7 +63,7 @@ function backgroundjobs() {
         string = "%s, and %s" % (", ".join(items[:-1]), items[-1])
       else:
         string = ", ".join(items)
-      print "\033[37;1m running %s" % string
+      print("\033[37;1m running %s" % string)
   '
 }
 
@@ -131,7 +131,9 @@ export GIT_EDITOR=$SVN_EDITOR
 
 export LIBTOOLIZE=glibtoolize
 
-export PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/npm/bin:~/node_modules/.bin:~/pear/bin:~/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix php55)/bin:$PATH
+# export PATH=./node_modules/.bin:$HOME/.rvm/bin:$HOME/npm/bin:~/node_modules/.bin:~/pear/bin:~/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix php55)/bin:$PATH
+export PATH=./node_modules/.bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:~/node_modules/.bin:~/pear/bin:~/.bin:/usr/local/bin:/usr/local/sbin:$PATH
+export GOPATH=~/Development/go
 
 # python
 export PYTHONDONTWRITEBYTECODE=1
@@ -188,18 +190,6 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 alias scpresume='rsync --partial --progress --progress --stats'
 
 alias vag='vagrant $@'
-
-function pyopen() {
-  $PYOPEN_CMD `pyfind $@`
-}
-
-function pyfind() {
-  x=`python -c "import $1; print $1.__file__" | sed 's/\.pyc$/\.py/'`;
-  if [ $? -ne 0 ]; then
-    exit $?
-  fi
-  grep -q "__init__.py$" <<< $x && echo `dirname $x` || echo $x
-}
 
 function ghettovpn() {
   $SSHUTTLE_EXECUTABLE -r "$VPN_HOST" 10/8
