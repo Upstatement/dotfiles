@@ -3,7 +3,7 @@
 # Inspired greatly by Armin Ronacher's bashrc
 # https://github.com/mitsuhiko/dotfiles/blob/master/bash/bashrc
 
-## ===== Pete / Upstatement modifications ===== ##
+## ===== Upstatement modifications ===== ##
 export MONGOHQ_URL='mongodb://dev:gordon@oceanic.mongohq.com:10066/dev-assets'
 
 # if npm exists, set global prefix to home dir
@@ -17,7 +17,11 @@ fi
 
 alias server='python -m SimpleHTTPServer'
 
-## /end pete-mod
+
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+
+## /end upstatement mods
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -145,7 +149,7 @@ if [ `id -u` != '0' ]; then
   export VIRTUALENV_USE_DISTRIBUTE=1
   export WORKON_HOME=$HOME/.virtualenvs
   export PIP_VIRTUALENV_BASE=$WORKON_HOME
-  export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache 
+  export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
   export PIP_REQUIRE_VIRTUALENV=true
   export PIP_RESPECT_VIRTUALENV=true
   #export PIP_USE_MIRRORS=true
