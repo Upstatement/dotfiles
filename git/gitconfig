@@ -1,9 +1,9 @@
 [github]
-  user = pkarl
+  user = mswartz
 
 [user]
-  name = Pete Karl II
-  email = pete@upstatement.com
+  name = Mike Swartz
+  email = mike@upstatement.com
 
 [color]
   diff = auto
