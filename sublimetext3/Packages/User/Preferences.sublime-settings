@@ -49,19 +49,22 @@
 		"static-built"
 	],
 	"font_face": "Inconsolata",
-	"font_size": 18,
+	"font_size": 16,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"index_exclude_patterns":
 	[
-		"/Users/pkarl/Sites/iapp-vagrant*",
 		"*.log"
 	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"pep8_ignore":
 	[
 		"E501"
 	],
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"theme": "predawn.sublime-theme"
 }
