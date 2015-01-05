@@ -6,7 +6,7 @@ There are terminal commands in the instructions. `they look like this`
 
 ## Instructions for use:
 
-1. Download & install Armin's vcprompt [link](https://www.dropbox.com/s/t9bwiwi2c0fexgp/vcprompt.zip)
+1. Download & install Armin's vcprompt [link](https://github.com/Upstatement/Upstatement/blob/master/vcprompt.zip)
  * Download that file to a folder called ~/Sources
   - if that folder doesn't exist, run `mkdir ~/Sources` from your terminal
   - Once it's created, put `vcprompt.zip` into `Sources` any way you know how
