@@ -1,6 +1,7 @@
 install: install-bash install-virtualenvwrapper install-pythonrc \
 		 install-subl install-bin install-vcprompt install-git install-hg \
-		 install-fish
+		 install-fish \
+		 install-jshint
 
 install-vcprompt:
 	@rm -rf /tmp/vcprompt
@@ -25,6 +26,9 @@ install-bash:
 	ln -fs `pwd`/bash/bashrc ~/.bash_profile
 	ln -fs ~/.bash_profile ~/.bashrc
 	@echo "Old .bash_profile saved as .bash_profile.old"
+
+install-jshint:
+	ln -fs `pwd`/jshint/jshintrc ~/.gitconfig
 
 install-virtualenvwrapper:
 	mkdir -p ~/.virtualenvs/
