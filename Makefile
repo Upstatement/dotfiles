@@ -28,7 +28,7 @@ install-bash:
 	@echo "Old .bash_profile saved as .bash_profile.old"
 
 install-jshint:
-	ln -fs `pwd`/jshint/jshintrc ~/.gitconfig
+	ln -fs `pwd`/jshint/jshintrc ~/.jshintrc
 
 install-virtualenvwrapper:
 	mkdir -p ~/.virtualenvs/
