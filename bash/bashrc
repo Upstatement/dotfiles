@@ -240,3 +240,10 @@ fi;
 # export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 # export JAVA_HOME="$(/usr/libexec/java_home)"
 # export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.12.002/libexec"
+
+export NVM_DIR="/Users/joshlevinson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias mysql='/Applications/MAMP/Library/bin/mysql'

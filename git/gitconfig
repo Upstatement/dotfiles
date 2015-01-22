@@ -1,9 +1,9 @@
 [github]
-  user = mswartz
+  user = joshlevinson
 
 [user]
-  name = Mike Swartz
-  email = mike@upstatement.com
+	name = Josh Levinson
+	email = joshalevinson@gmail.com
 
 [color]
   diff = auto
@@ -61,6 +61,8 @@
 
 [core]
   pager = less -R
+	excludesfile = /Users/joshlevinson/.gitignore
+	quotepath = false
 
 [push]
   default = matching
@@ -84,3 +86,9 @@
 
 [difftool]
   prompt = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

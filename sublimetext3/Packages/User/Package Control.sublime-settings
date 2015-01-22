@@ -1,5 +1,13 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"Alignment",
@@ -11,7 +19,7 @@
 		"DashDoc",
 		"Dayle Rees Color Schemes",
 		"DocBlockr",
-		"Dust.js",
+		"DustBuster",
 		"Emmet",
 		"GitGutter",
 		"HTML Boilerplate",
@@ -23,6 +31,7 @@
 		"JsFormat",
 		"JSHint Gutter",
 		"LESS",
+		"Markdown Preview",
 		"nginx",
 		"Package Control",
 		"PhpDoc",
@@ -32,6 +41,7 @@
 		"SideBarEnhancements",
 		"SSH Config",
 		"SublimeLinter",
+		"SublimePhpTidy",
 		"Theme - Flatland",
 		"Theme - Soda",
 		"Theme - Spacegray",
@@ -40,6 +50,7 @@
 	],
 	"repositories":
 	[
-		"https://github.com/jdc0589/JsFormat"
+		"https://github.com/jdc0589/JsFormat",
+		"https://github.com/welovewordpress/SublimePhpTidy"
 	]
 }
