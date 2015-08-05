@@ -7,21 +7,10 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
-            "jshint_options": {
-              "browser": true,
-              "jquery": true,
-              "node": true,
-              "camelcase": true,
-              "eqeqeq": true,
-              "indent": 2,
-              "latedef": true,
-              "maxlen": 80,
-              "newcap": true,
-              "quotmark": "single",
-              "strict": true,
-              "undef": true,
-              "unused": true,
-              "eqnull": true
+            "jshint": {
+              "@disable": false,
+              "args": [],
+              "excludes": []
             },
             "pep8": {
                 "@python": "2.7",
