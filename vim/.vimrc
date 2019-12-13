@@ -91,7 +91,7 @@ set splitbelow                         " Vertical splits open under the current
 set splitright                         " Horizontal splits open next to the current
 set modeline                           " Respect modelines
 set modelines=4
-set diffopt+=vertical
+set diffopt=vertical
 set title                              " Show the PWD and current file in terminal title
 
 
